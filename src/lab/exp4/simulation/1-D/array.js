@@ -74,7 +74,11 @@ window.view = {
 		for ( i = 0 ; i < inputValue ; i++ ) {
 			var random = Math.floor(Math.random()*15)
 			this.numbers.push(String(random))
+			
 		}
+		
+		
+		
 	},
 	getUserInput: function() {
 		var inputValue = document.getElementById('userInput').value
@@ -109,6 +113,7 @@ window.view = {
 		if ( element.length > 0 )
 			document.getElementById('sortingDiv').removeChild(element[0])
 	},
+	
 	createImage: function(left, top) {
 		var image = document.createElement('img')
 		image.style.position = 'absolute'
@@ -118,6 +123,8 @@ window.view = {
         image.className = 'arrowImage'
 		document.getElementById('sortingDiv').appendChild(image)
 	},
+	
+	
 	showCode: function() {
 		document.getElementById('1-dArray').className = 'show, codeLayout'
 	},
@@ -140,6 +147,8 @@ window.view = {
 		position.push(posLeft, posTop)
 		return position
 	},
+	
+	
 	highlightNextStep: function() {
 		this.changeClass(this.lastRedDiv.id, 'show')
 		this.changeClass(this.nextRedDiv.id, 'showDivInRed')
